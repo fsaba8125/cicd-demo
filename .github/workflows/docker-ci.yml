@@ -14,5 +14,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install flask pytest
+
+      - name: Run Automated Tests
+        run: pytest -q test_app.py
+
       - name: Build Docker Image
         run: docker build -t docker-cicd-demo:v1 .
