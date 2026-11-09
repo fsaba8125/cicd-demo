@@ -36,4 +36,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-cicd-demo:v1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-cicd-demo:v2
